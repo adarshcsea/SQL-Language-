@@ -1,4 +1,8 @@
-CREATE TABLE employee(
+USE practice_db;
+drop table if exists EMPLOYEE_0;
+
+CREATE TABLE if not exists EMPLOYEE_0 
+(
   emp_id int,
   Name varchar(20),
   Dept varchar(20),
@@ -9,7 +13,7 @@ CREATE TABLE employee(
   exp int
 );
 
-INSERT INTO employee VALUES
+INSERT INTO EMPLOYEE_0 VALUES
 (101, 'RAHUL', 'HR', 30000, 'M', 19, 'Chennai' , 2 ),
 (101, 'PRIYA', 'IT', 40000, 'F', 20, 'BANGLORE' , 5 ),
 (101, 'ASHA', 'FINANCE', 50000, 'F', 18, 'DUBAI' , 10 ),
@@ -20,23 +24,23 @@ INSERT INTO employee VALUES
 SELECT * FROM employee;
 
 
-SELECT Salary FROM employee;
-SELECT Name FROM employee WHERE Dept = 'HR';
-SELECT * FROM employee WHERE Gender = 'F';
-SELECT * FROM employee WHERE Age = 30;
-SELECT * FROM employee WHERE Salary > 50000;
-SELECT * FROM employee WHERE Salary < 60000;
-SELECT * FROM employee WHERE  Age <> 25;
-SELECT * FROM employee WHERE Gender = 'F' AND  City = 'BANGLORE';
-SELECT * FROM employee WHERE  City = 'BANGLORE' OR City = 'CHENNAI';
-SELECT * FROM employee WHERE Salary > 40000 AND Salary < 80000 ;
-SELECT * FROM employee WHERE Dept = 'HR' AND Dept = 'IT';
-SELECT * FROM employee WHERE Name LIKE'A%' AND Name LIKE '%A';
-SELECT * FROM employee WHERE Name LIKE'%A%' AND Name LIKE '_A%';
+SELECT Salary FROM EMPLOYEE_0;
+SELECT Name FROM EMPLOYEE_0 WHERE Dept = 'HR';
+SELECT * FROM EMPLOYEE_0 WHERE Gender = 'F';
+SELECT * FROM EMPLOYEE_0 WHERE Age = 30;
+SELECT * FROM EMPLOYEE_0 WHERE Salary > 50000;
+SELECT * FROM EMPLOYEE_0 WHERE Salary < 60000;
+SELECT * FROM EMPLOYEE_0 WHERE  Age <> 25;
+SELECT * FROM EMPLOYEE_0 WHERE Gender = 'F' AND  City = 'BANGLORE';
+SELECT * FROM EMPLOYEE_0 WHERE  City = 'BANGLORE' OR City = 'CHENNAI';
+SELECT * FROM EMPLOYEE_0 WHERE Salary > 40000 AND Salary < 80000 ;
+SELECT * FROM EMPLOYEE_0 WHERE Dept = 'HR' AND Dept = 'IT';
+SELECT * FROM EMPLOYEE_0 WHERE Name LIKE'A%' AND Name LIKE '%A';
+SELECT * FROM EMPLOYEE_0 WHERE Name LIKE'%A%' AND Name LIKE '_A%';
 
 
 
-SELECT Name, Exp,
+SELECT Name, exp,
 CASE
   WHEN Exp >= 10 THEN 'SENIOR'
   WHEN EXP >= 5 THEN 'MID LEVEL'

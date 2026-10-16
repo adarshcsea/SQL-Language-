@@ -1,4 +1,7 @@
-CREATE TABLE EMPLOYEE (
+USE practice_db;
+drop table if exists EMPLOYEE_1;
+
+CREATE TABLE if not exists EMPLOYEE_1 (
   emp_id INT,
   name varchar(15),
   dept varchar(10),
@@ -80,10 +83,3 @@ SELECT dept, AVG(salary) AS avg_salary
 FROM EMPLOYEE
 GROUP BY dept
 HAVING AVG(salary)>30000;
-
-
-
-
-
-
-

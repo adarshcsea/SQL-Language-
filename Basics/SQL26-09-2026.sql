@@ -1,4 +1,6 @@
-CREATE TABLE EMPLOYEE (
+USE practice_db;
+drop table if exists EMPLOYEE_2;
+CREATE TABLE if not exists EMPLOYEE_2 (
   emp_id INT,
   name varchar(15),
   dept varchar(10),
