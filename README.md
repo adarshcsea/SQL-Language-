@@ -29,7 +29,7 @@ This repository documents my progress from basic SQL queries to more advanced da
 - ⏳ DBMS Problem Solving
 
 📂 Repository Structure
-
+```
 sql-practice/
 │
 ├── Basics/
@@ -51,7 +51,7 @@ sql-practice/
 │
 ├── .gitignore
 └── README.md
-
+```
 The structure will grow as I learn more SQL and DBMS concepts.
 
 🎯 Goals
